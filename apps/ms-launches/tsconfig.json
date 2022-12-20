@@ -1,0 +1,9 @@
+{
+  "extends": "tsconfig/nodejs.json",
+  "include": [
+    "../../../mr-launches/apps/ms-launches/**/*.ts"
+  ],
+  "exclude": [
+    "../../../mr-launches/node_modules"
+  ]
+}
