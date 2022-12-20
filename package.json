@@ -20,9 +20,5 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {
-    "sqlite3": "^5.1.4",
-    "typeorm": "^0.3.11"
-  },
   "packageManager": "npm@8.19.2"
 }

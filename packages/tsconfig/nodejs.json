@@ -5,6 +5,7 @@
       "node"
     ],
     "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "baseUrl": ".",
     "outDir": "build",
