@@ -2,7 +2,22 @@
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "build",
-    "rootDir": ".",
+    "rootDir": "./src",
+    "paths": {
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@infrastructure/*": [
+        "./src/infrastructure/*"
+      ],
+      "@domain/*": [
+        "./src/domain/*"
+      ],
+      "@application/*": [
+        "./src/application/*"
+      ]
+    },
+    "sourceMap": true,
   },
   "extends": "tsconfig/nodejs.json",
   "include": [

@@ -1,7 +1,9 @@
 
 import express, { Request, Response, Router } from 'express'
 import LaunchesController from 'src/application/launches/launches.controller';
+import LaunchesService from 'src/application/launches/launches.service';
 import { AppDataSource } from 'src/infrastructure/repository/data-source';
+import { LaunchesRepository } from 'src/infrastructure/repository/launches.repository';
 
 
 async function initialize() {
@@ -15,7 +17,7 @@ async function initialize() {
     })
 
     const routes: Router = express.Router();
-    new LaunchesController(routes);
+    new LaunchesController(routes, new LaunchesService(new LaunchesRepository()));
 
     app.use(routes);
 

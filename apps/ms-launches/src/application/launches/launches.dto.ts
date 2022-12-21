@@ -1,5 +1,5 @@
-export type LaunchesDTO = {
-    id: number;
-    rocket: string;
-    data: Date;
+export class LaunchesDTO {
+    constructor(public id: number,
+        public rocket: string,
+        public date: Date) { }
 }
