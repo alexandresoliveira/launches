@@ -9,21 +9,7 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "outDir": "build",
-    "rootDir": "./src",
-    "paths": {
-      "@shared/*": [
-        "./src/shared/*"
-      ],
-      "@infrastructure/*": [
-        "./src/infrastructure/*"
-      ],
-      "@domain/*": [
-        "./src/domain/*"
-      ],
-      "@application/*": [
-        "./src/application/*"
-      ]
-    },
+    "rootDir": ".",
     "sourceMap": true,
     "plugins": [
       {

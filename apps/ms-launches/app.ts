@@ -9,7 +9,6 @@ async function initialize() {
 
     const app = express();
     app.use(express.json())
-    app.use(express.urlencoded());
 
     app.get("/", (req: Request, res: Response) => {
         res.json({ keepAlive: Date.now() })

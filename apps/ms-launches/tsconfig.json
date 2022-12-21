@@ -1,24 +1,14 @@
 {
   "compilerOptions": {
-    "types": [
-      "jest",
-      "node"
-    ],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
     "baseUrl": ".",
     "outDir": "build",
     "rootDir": ".",
-    "sourceMap": true,
-    "plugins": [
-      {
-        "transform": "ts-auto-mock/transformer",
-        "cacheBetweenTests": false
-      }
-    ]
   },
+  "extends": "tsconfig/nodejs.json",
+  "include": [
+    "../../../mr-launches/apps/ms-launches/**/*.ts"
+  ],
   "exclude": [
-    "node_modules"
+    "../../../mr-launches/node_modules"
   ]
 }
