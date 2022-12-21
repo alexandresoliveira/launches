@@ -1,0 +1,45 @@
+@import url('mixin');
+
+.flex-h {
+  @include flex(row);
+}
+
+.flex-v {
+  @include flex(column);
+}
+
+.wrap {
+  @include wrap(wrap);
+}
+
+.nowrap {
+  @include wrap(nowrap);
+}
+
+.center {
+  @include center();
+}
+
+.center-h {
+  @include center-h();
+}
+
+.center-v {
+  @include center-v();
+}
+
+.flex-basis-0 {
+  @include flex-basis(0);
+}
+
+.flex-basis-25 {
+  @include flex-basis(25%);
+}
+
+.flex-basis-33 {
+  @include flex-basis(33.3333%);
+}
+
+.flex-basis-50 {
+  @include flex-basis(50%);
+}

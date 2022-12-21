@@ -1,0 +1,23 @@
+@mixin flex($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin wrap($wrap: wrap) {
+  flex-wrap: $wrap;
+}
+@mixin center() {
+  align-items: center;
+  justify-content: center;
+}
+@mixin center-h() {
+  justify-content: center;
+}
+@mixin center-v() {
+  align-items: center;
+}
+@mixin space($space: space-between) {
+  justify-content: $space;
+}
+@mixin flex-basis($basis: auto) {
+  flex-basis: $basis;
+}
