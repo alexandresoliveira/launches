@@ -1,5 +1,6 @@
-import express, { Router, Request, Response } from "express";
-import Service from "../services/launches.service";
+import { Router, Request, Response } from "express";
+import Service from "./launches.service";
+import { LaunchesDTO } from "./launches.dto";
 
 export default class LaunchesController {
   constructor(router: Router) {
@@ -13,11 +14,11 @@ export default class LaunchesController {
     });
   }
 
-   getAllLaunches() {
+  getAllLaunches() {
     return Service.getAll();
   }
 
-  saveLaunch(launch) {
+  saveLaunch(launch: LaunchesDTO) {
     return Service.saveOne(launch);
   }
 }
