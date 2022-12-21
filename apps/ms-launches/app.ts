@@ -19,7 +19,7 @@ async function initialize() {
 
     app.use(routes);
 
-    app.listen(3003, () => { console.log("App Running: http://localhost:3003") })
+    app.listen(3004, () => { console.log("App Running: http://localhost:3004") })
 }
 
 initialize();
