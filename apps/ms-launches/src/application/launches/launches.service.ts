@@ -1,3 +1,4 @@
+import { LaunchesDomain } from '@domain/launches/launches.domain';
 import { LaunchesRepository } from '@infrastructure/repository/launches.repository';
 import ValidationError from '@shared/errors/validation.error';
 import { LaunchesDTO } from './launches.dto';
@@ -21,7 +22,8 @@ export default class LaunchesService {
   }
 
   validate(launch: LaunchesDTO) {
-    if (!launch.rocket && !launch.date) throw new ValidationError("Validation Error", "Launch must have a date and a rocket");
+    const launchDomain = new LaunchesDomain(launch.id, launch.rocket, launch.date);
+    launchDomain.validateLaunch();
     return true;
   }
 }

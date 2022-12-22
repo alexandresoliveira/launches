@@ -2,13 +2,14 @@
 * Typescript
 * React
 
-# Frontend Launches
+# Backend/Frontend Launches
 
-Create a frontend UI that displays a list of all satellite launches.
+Create a frontend UI that displays a list of all rockets launches.
 You can fetch the launch data at the endpoint that you will create in the backend project.
 
-* Add ability for a user to search by satellite name
-* Bonus: add a date filter to allow users to select a date and only show satellites launched after that date
+* Backend: Create the Rocket entity an the relantionships with the Launch entity and the Endpoint to query a Launch by the rocket name
+* Frontend: Add ability for a user to search by rockets name
+* Bonus: add a date filter to allow users to select a date and only show rocketss launched after that date
 * Bonus: add a checkbox to allow users to select only successful launches
 * Bonus(advanced): demonstrate a e2e test
 * Bonus(advanced): Create a unit test
