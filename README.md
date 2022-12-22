@@ -24,6 +24,5 @@ You can fetch the launch data at the endpoint that you will create in the backen
 
 * How would you think of documentation
 * What about CI / CD setup
-* How could the directory structure evolve if this was to become a more complex project
-  any other best practices you would want to add
-* Bonus: Explain how we can
+* How could the directory structure evolve if this was to become a more complex project (Models of Architectures)
+* Any other best practices you would want to add
