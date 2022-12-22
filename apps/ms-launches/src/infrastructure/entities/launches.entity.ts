@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 
 @Entity()
 export class Launches {
@@ -11,4 +11,7 @@ export class Launches {
 
     @Column('date')
     date: Date
+    
+    @Column('success')
+    success: boolean
 }
