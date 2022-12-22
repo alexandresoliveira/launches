@@ -11,8 +11,8 @@ export default class LaunchesService {
     const launches = await this.lauchesRepository.find();
 
     return launches.map((entityLaunch => {
-      const { id, rocket, date } = entityLaunch;
-      return (new LaunchesDTO(id, rocket, date));
+      const { id, rocket, date, success } = entityLaunch;
+      return (new LaunchesDTO(id, rocket, date, success));
     }))
   }
 
@@ -22,7 +22,7 @@ export default class LaunchesService {
   }
 
   validate(launch: LaunchesDTO) {
-    const launchDomain = new LaunchesDomain(launch.id, launch.rocket, launch.date);
+    const launchDomain = new LaunchesDomain(launch.id, launch.rocket, launch.date, launch.success);
     launchDomain.validateLaunch();
     return true;
   }
