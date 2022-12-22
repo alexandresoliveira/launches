@@ -12,6 +12,9 @@ export class Launches {
     @Column('date')
     date: Date
     
-    @Column('success')
+    @Column({
+        nullable: true,
+        default: false,
+    })
     success: boolean
 }
