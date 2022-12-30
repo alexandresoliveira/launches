@@ -4,6 +4,9 @@ import LaunchesService from 'src/application/launches/launches.service'
 import { AppDataSource } from 'src/infrastructure/repository/data-source'
 import { LaunchesRepository } from 'src/infrastructure/repository/launches.repository'
 
+/*
+    #TASK-BACKEND-0 (CODE ORGANIZATION UNDERSTANDING)- NAVIGATE THROUGH THE CODE TO UNDERSTAND HOW IT IS ORGANIZED AND THEN EXPLAIN TO US.
+  */
 
 async function initialize() {
     await AppDataSource.initialize().catch((error) => console.log(error))
@@ -11,7 +14,7 @@ async function initialize() {
     const app = express()
     app.use(express.json())
 
-    app.get('/', (req: Request, res: Response) => {
+    app.get('/', (_req: Request, res: Response) => {
         res.json({ keepAlive: Date.now() })
     })
 
@@ -20,7 +23,9 @@ async function initialize() {
 
     app.use(routes)
 
-    app.listen(3004, () => { console.log('App Running: http://localhost:3004') })
+    app.listen(3004, () => {
+        console.log('App Running: http://localhost:3004')
+    })
 }
 
 initialize()

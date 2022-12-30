@@ -12,7 +12,7 @@
 Create a frontend UI that displays a list of all rockets launches.
 You can fetch the launch data at the endpoint that you will create in the backend project.
 
-* Backend: Create the Rocket entity, relantionships with the Launch entity and the Endpoint to query a Launch by the rocket name
+* Backend: The tasks are specified in the code. Search for #TASK-BACKEND- 0, 1, 2, 3, and 4. You can go in any order to solve the problems.
 * Frontend: Add ability for a user to search by rockets name
 * Bonus: add a date filter to allow users to select a date and only show rocketss launched after that date
 * Bonus: add a checkbox to allow users to select only successful launches
