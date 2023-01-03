@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import LaunchesService, { ILaunchProperties } from '../../services/launches.service';
 
-//TODO TASK-FRONTEND-02 Create a method with service callback with a ASC Alphabetical order
+//TODO #TASK-FRONTEND-02 Create a method with service callback with a ASC Alphabetical order
 
 const Home = () => {
   const [launches, setLaunches] = useState<ILaunchProperties[]>();
