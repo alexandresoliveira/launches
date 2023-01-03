@@ -1,10 +1,24 @@
+import { launches } from '../models/LaunchesModel';
+
 export type ILaunchProperties = {
+  id: number;
+  date?: string;
+  rocketId: number;
+  rocket?: IRocketProperties;
   success?: boolean;
-  date_utc?: string;
-  id?: string;
-  rocket?: string;
+  launchCode?: string;
 };
 
-export const getLaunches = (props: ILaunchProperties): ILaunchProperties => {
-  return props;
+export type IRocketProperties = {
+  id: number;
+  name: string;
 };
+
+class LaunchesService {
+  getLaunches = (): ILaunchProperties[] => {
+    //TODO TASK-FRONTEND-01 choose an http api to make a call to a endpoint http://localhost:3004/launches
+    return launches;
+  };
+}
+
+export default new LaunchesService();
