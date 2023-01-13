@@ -1,6 +1,7 @@
 import { LaunchesDomain } from '@domain/launches/launches.domain'
 import { RocketDomain } from '@domain/rockets/rockets.domain'
 import { LaunchesRepository } from '@infrastructure/repository/launches.repository'
+import { createHash } from 'crypto'
 import { LaunchesDTO } from '../../shared/dtos/launches.dto'
 
 export default class LaunchesService {
@@ -13,7 +14,10 @@ export default class LaunchesService {
    */
     async getByName(name: string): Promise<LaunchesDTO[]> {
         const launches = await this.lauchesRepository.findByName(name)
-        return launches
+        return launches.map(launch => {
+            launch.launchCode = createHash('sha256').update(launch.launchCode).digest('hex');
+            return launch
+        })
     }
 
     async saveOne(launch: LaunchesDTO) {
