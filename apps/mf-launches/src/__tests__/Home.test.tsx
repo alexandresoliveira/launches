@@ -8,3 +8,7 @@ test('renders app hello text', () => {
 
   expect(screen.getByTestId('home-title')).toHaveTextContent('Home');
 });
+
+test('asdfas', () => {
+  render(<Home />)
+});

@@ -13,6 +13,7 @@ import * as path from '@/routes/path';
 // =================================== Pages(lazy load) =================================== ↓
 const NotFound = lazy(() => import('@/pages/NotFound'));
 const Home = lazy(() => import('@/pages/Home'));
+const Launcher = lazy(() => import('@/pages/Launcher'));
 
 // ^ New page to here...
 // =================================== Pages(lazy load) =================================== ↑
@@ -28,6 +29,10 @@ const routes: RouteObject[] = [
       {
         path: path.HOME,
         element: <Home />,
+      },
+      {
+        path: path.LAUNCHES,
+        element: <Launcher />,
       },
     ],
   },

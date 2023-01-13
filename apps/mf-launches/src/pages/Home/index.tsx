@@ -1,3 +1,4 @@
+import List from '@/components/List';
 import { useEffect, useState } from 'react';
 import LaunchesService, { ILaunchProperties } from '../../services/launches.service';
 
@@ -5,8 +6,8 @@ import LaunchesService, { ILaunchProperties } from '../../services/launches.serv
 
 const Home = () => {
   const [launches, setLaunches] = useState<ILaunchProperties[]>();
-  const fetchLaunches = () => {
-    setLaunches(LaunchesService.getLaunches());
+  const fetchLaunches = async () => {
+    setLaunches(await LaunchesService.getLaunches());
   };
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <div className='index-page'>
       <h1 data-testid='home-title'>Home</h1>
-      <p>{JSON.stringify(launches)}</p>
+      <List models={launches ?? []} />
     </div>
   );
 };

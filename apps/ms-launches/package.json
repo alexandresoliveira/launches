@@ -10,6 +10,7 @@
     "test": "jest apps/ms-launches --coverage"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.1.4",
